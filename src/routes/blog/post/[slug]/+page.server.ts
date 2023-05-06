@@ -1,8 +1,7 @@
-import * as db from '$lib/server/database';
+import { getPostFromSlug } from '$lib/server/database';
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {
-	return {
-		post: await db.getContent('post', params.slug)
-	};
+	const post = await getPostFromSlug(params.slug);
+	return { post };
 }) satisfies PageServerLoad;

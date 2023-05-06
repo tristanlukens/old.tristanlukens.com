@@ -1,50 +1,49 @@
-import * as matter from 'gray-matter';
+import { PUBLIC_READONLY_HYGRAPH_CONTENT_API } from '$env/static/public';
+import { request, gql } from 'graphql-request';
 
-export const getContentList = async () => {
-	// the content.txt file contains a format like the following (mind the blank lines):
-
-	// cover:
-	// [return-seperated covers]
-	//
-	// post:
-	// [return-seperated posts]
-	//
-
-	// it's the output of `ls`'ing the cover/ and post/ dirs :)
-	// what I'm doing here, is first fetching it, then seperating it into an array and
-	// removing the blank lines. then, if trying to find covers, returm a slice that starts
-	// at one element after the cover: element (so I'm skipping the cover element itself)
-	// until I come across the post: element. if I'm trying to find posts, I start at
-	// post: (and skipping over it) and returning the rest of the array. after that,
-	// I remove all the file extensions and like magic, there's a list of all your covers or posts!
-	//
-	// I will admit that the code could be cleaner
-
-	const res = await fetch(
-		`https://raw.githubusercontent.com/tristanlukens/site-content/main/content.txt`
-	);
-
-	const list = (await res.text()).split('\n').filter((str) => str != '');
-
-	return {
-		covers: list
-			.slice(list.indexOf('cover:') + 1, list.indexOf('post:'))
-			.map((str) => str.replace('.md', '')),
-		posts: list.slice(list.indexOf('post:') + 1).map((str) => str.replace('.md', ''))
-	};
+export type post = {
+	title: string;
+	uploadDate: string;
+	content: string;
+	slug?: string;
+	tags?: string[];
 };
 
-export const getContentData = async (slug: string) => {
-	const list = await getContentList();
-	let type: 'post' | 'cover' = 'post';
-	if (list.covers.includes(slug)) type = 'cover';
+type getPostsRes = { posts: post[] };
+export const getPosts = async () => {
+	const query = gql`
+		query getPosts {
+			posts {
+				title
+				uploadDate
+				slug
+				tags
+			}
+		}
+	`;
 
-	const res = await fetch(
-		`https://raw.githubusercontent.com/tristanlukens/site-content/main/${type}/${slug}.md`
-	);
-	const text = await res.text();
+	const { posts } = (await request(PUBLIC_READONLY_HYGRAPH_CONTENT_API, query)) as getPostsRes;
 
-	const { content, data } = matter.default(text);
+	return posts;
+};
 
-	return { content, data };
+type getPostFromSlugRes = { post: post };
+export const getPostFromSlug = async (slug: string) => {
+	const query = gql`
+		query getPostFromSlug {
+			post(where: { slug: "${slug}" }) {
+				title
+				uploadDate
+				content
+				tags
+			}
+		}
+	`;
+
+	const { post } = (await request(
+		PUBLIC_READONLY_HYGRAPH_CONTENT_API,
+		query
+	)) as getPostFromSlugRes;
+
+	return post;
 };

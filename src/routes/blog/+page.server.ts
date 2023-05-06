@@ -1,7 +1,7 @@
-import * as db from '$lib/server/database';
+import { getPosts } from '$lib/server/database';
 import type { PageServerLoad } from './$types';
 
 export const load = (async () => {
-	const list = await db.getContentList();
-	return { list };
+	const posts = await getPosts();
+	return { posts };
 }) satisfies PageServerLoad;

@@ -7,7 +7,7 @@
 </script>
 
 <section
-	class="prose prose-amber prose-a:transition hover:prose-a:text-amber-500 prose-headings:text-center"
+	class="prose prose-amber prose-a:transition prose-a:text-amber-500 hover:prose-a:text-amber-400 prose-headings:text-center"
 >
 	<slot>{@html marked.parse(md)}</slot>
 </section>

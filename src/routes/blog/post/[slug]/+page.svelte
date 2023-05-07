@@ -21,17 +21,17 @@
 
 <Markdown>
 	<h1>{data.post?.title}</h1>
+</Markdown>
 
+<ul class="flex px-0 list-none flex-wrap gap-1 items-center justify-center py-8">
 	{#if data.post?.tags}
-		<ul class="flex p-0 list-none items-center justify-center">
-			{#each data.post?.tags as tag}
-				<li>
-					<Tag {tag} />
-				</li>
-			{/each}
-		</ul>
+		{#each data.post?.tags as tag}
+			<Tag {tag} />
+		{/each}
 	{/if}
+</ul>
 
+<Markdown>
 	<p class="text-center uppercase text-sm font-bold">
 		Written on {data.post?.uploadDate} by yours truly
 	</p>

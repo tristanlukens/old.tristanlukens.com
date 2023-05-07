@@ -8,7 +8,7 @@ This site was made using [TailwindCSS](https://tailwindcss.com) and its Typograp
 
 ---
 
-## about<span class="text-amber-500">me</span>
+## about<span class="text-amber-400">me</span>
 
 I'm Tristan, sixteen and was born and live in the Netherlands. I like all kinds of foods, my favourite animal is the 🐘 and I'm a huge perfectionist. I like computers, biking, science, music, reading, F1, rally, and sitcoms (my favourite being Brooklyn 99, but The Office is amazing too). The Hobbit is and probably will for the next while be my favourite book, but I'm reading The Lord of the Rings at the moment. Tolkien is simply incredible.
 

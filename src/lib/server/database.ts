@@ -9,6 +9,16 @@ export type post = {
 	tags?: string[];
 };
 
+export type cover = {
+	artist: string;
+	song: string;
+	youtubeID: string;
+	content: string;
+	uploadDate: string;
+	type: string;
+	slug: string;
+};
+
 type getPostsRes = { posts: post[] };
 export const getPosts = async () => {
 	const query = gql`
@@ -46,4 +56,46 @@ export const getPostFromSlug = async (slug: string) => {
 	)) as getPostFromSlugRes;
 
 	return post;
+};
+
+type getCoversRes = { covers: cover[] };
+export const getCovers = async () => {
+	const query = gql`
+		query getCovers {
+			covers {
+				artist
+				song
+				type
+				uploadDate
+				slug
+			}
+		}
+	`;
+
+	const { covers } = (await request(PUBLIC_READONLY_HYGRAPH_CONTENT_API, query)) as getCoversRes;
+
+	return covers;
+};
+
+type getCoverFromSlugRes = { cover: cover };
+export const getCoverFromSlug = async (slug: string) => {
+	const query = gql`
+		query getCoverFromSlug {
+			cover(where: { slug: "${slug}" }) {
+				artist
+				song
+				youtubeID
+				content
+				uploadDate
+				type
+			}
+		}
+	`;
+
+	const { cover } = (await request(
+		PUBLIC_READONLY_HYGRAPH_CONTENT_API,
+		query
+	)) as getCoverFromSlugRes;
+
+	return cover;
 };

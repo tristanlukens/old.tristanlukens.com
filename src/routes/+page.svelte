@@ -2,7 +2,7 @@
 	import Markdown from '../lib/components/markdown.svelte';
 
 	const md = `
-**Hulloo! Welcome to my site. Here you can read a bit about me, the projects I've worked on and some articles I wrote about things that interest me. You can also watch me beat my drumset like it owes me a fifty dollars.**
+**Hulloo! Welcome to my site. Here you can read a bit about me, the projects I've worked on and some articles I wrote about things that interest me. You can also watch me beat my drumset like it owes me fifty dollars.**
 
 This site was made using [TailwindCSS](https://tailwindcss.com) and its Typography plugin. It looks absolutely stunning, so I decided against changing too much of it, especially since most of this site is text-based. You should be aware of the fact that **most of this was not designed by me**. Thank you, Tailwind.
 

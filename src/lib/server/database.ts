@@ -23,7 +23,8 @@ type getPostsRes = { posts: post[] };
 export const getPosts = async () => {
 	const query = gql`
 		query getPosts {
-			posts {
+			# apparently only 10 posts will show up by default
+			posts(orderBy: uploadDate_DESC, first: 10000) {
 				title
 				uploadDate
 				slug
@@ -62,7 +63,7 @@ type getCoversRes = { covers: cover[] };
 export const getCovers = async () => {
 	const query = gql`
 		query getCovers {
-			covers {
+			covers(orderBy: uploadDate_DESC, first: 10000) {
 				artist
 				song
 				type

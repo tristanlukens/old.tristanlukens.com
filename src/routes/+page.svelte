@@ -20,7 +20,7 @@ That's about it. If it's not enough — first of all, thank you — you could re
 
 <svelte:head>
 	<title>Home | Tristan Lukens</title>
-	<meta name="description" content="Personal corner on the internet. Welcome!" />
+	<meta name="description" content="My personal corner on the internet. Welcome!" />
 </svelte:head>
 
 <Markdown {md} />

@@ -14,6 +14,8 @@ I'm Tristan, sixteen and was born and live in the Netherlands. I like all kinds 
 
 I play the bass and the drums. Aside from that, I'm a huge music lover — I've got a [huge (yet evergrowing) playlist of music I love](https://open.spotify.com/playlist/7MKHIXzTUI1g0hT0nAs671?si=fb9331480d89486f) on Spotify. I'll probably write a blog post on that soon as well. My music taste is... diverse, but defined. That is, I like a lot of things, but I know what I like and what I don't.
 
+I like GitHub. [Here's my profile](https://github.com/tristanlukens). I'm not really working on anything in particular at the moment, but I have some ideas.
+
 That's about it. If it's not enough — first of all, thank you — you could read some articles I wrote at [my blog](/blog), or watch some drum covers over at the [covers tab](/covers).
 `;
 </script>

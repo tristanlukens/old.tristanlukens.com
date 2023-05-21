@@ -10,7 +10,7 @@ This site was made using [TailwindCSS](https://tailwindcss.com) and its Typograp
 
 ## about<span class="text-amber-400">me</span>
 
-I'm Tristan, sixteen and was live in the Netherlands. I like all kinds of foods, my favourite animal is the 🐘 and I'm a huge perfectionist. I like computers, biking, science, music, reading, F1, rally, and sitcoms (my favourite being Brooklyn 99, but The Office is amazing too). The Hobbit is and probably will for the next while be my favourite book, but I'm reading The Lord of the Rings at the moment. Tolkien is simply incredible.
+I'm Tristan, sixteen and live in the Netherlands. I like all kinds of foods, my favourite animal is the 🐘 and I'm a huge perfectionist. I like computers, biking, science, music, reading, F1, rally, and sitcoms (my favourite being Brooklyn 99, but The Office is amazing too). The Hobbit is and probably will for the next while be my favourite book, but I'm reading The Lord of the Rings at the moment. Tolkien is simply incredible.
 
 I play the bass and the drums. Aside from that, I'm a huge music lover — I've got a [huge (yet evergrowing) playlist of music I love](https://open.spotify.com/playlist/7MKHIXzTUI1g0hT0nAs671?si=fb9331480d89486f) on Spotify. I'll probably write a blog post on that soon as well. My music taste is... diverse, but defined. That is, I like a lot of things, but I know what I like and what I don't.
 

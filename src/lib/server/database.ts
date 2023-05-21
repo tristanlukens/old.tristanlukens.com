@@ -17,6 +17,7 @@ export type cover = {
 	uploadDate: string;
 	type: string;
 	slug: string;
+	version: number | undefined;
 };
 
 type getPostsRes = { posts: post[] };
@@ -69,6 +70,7 @@ export const getCovers = async () => {
 				type
 				uploadDate
 				slug
+				version
 			}
 		}
 	`;
@@ -89,6 +91,7 @@ export const getCoverFromSlug = async (slug: string) => {
 				content
 				uploadDate
 				type
+				version
 			}
 		}
 	`;

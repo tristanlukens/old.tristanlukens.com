@@ -5,7 +5,9 @@
 
 	export let data: PageData;
 
-	const title = `${data.cover?.artist} - ${data.cover?.song} | ${data.cover?.type} cover`;
+	const title = `${data.cover?.artist} - ${data.cover?.song} | ${data.cover?.type} cover ${
+		data.cover?.version ? `| v${data.cover?.version}` : ''
+	}`;
 </script>
 
 <!-- ts kept crying like a baby about post being null. I don't know why, but at least this works -->

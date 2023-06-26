@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 </svelte:head>
 
 <div class="max-w-prose tracking-wide mx-auto px-8 pt-8 pb-16 text-neutral-900 text-justify">

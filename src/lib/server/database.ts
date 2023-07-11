@@ -5,8 +5,8 @@ export type post = {
 	title: string;
 	uploadDate: string;
 	content: string;
+	tags: string[];
 	slug?: string;
-	tags?: string[];
 };
 
 export type cover = {

@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 
 	import Markdown from '$lib/components/markdown.svelte';
-	import Tag from '$lib/components/tag.svelte';
+	import TagGroup from '$lib/components/tagGroup.svelte';
 
 	export let data: PageData;
 </script>
@@ -22,13 +22,9 @@
 	<h1>{data.post?.title}</h1>
 </Markdown>
 
-<ul class="flex px-0 list-none flex-wrap gap-1 items-center justify-center py-8">
-	{#if data.post?.tags}
-		{#each data.post?.tags as tag}
-			<Tag {tag} />
-		{/each}
-	{/if}
-</ul>
+<div class="py-6">
+	<TagGroup tags={data.post?.tags} />
+</div>
 
 <Markdown>
 	<p class="text-center uppercase text-sm font-bold">

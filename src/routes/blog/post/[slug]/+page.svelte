@@ -5,7 +5,6 @@
 	import Tag from '$lib/components/tag.svelte';
 
 	export let data: PageData;
-	console.log(data.post?.tags?.join(', '));
 </script>
 
 <!-- ts kept crying like a baby about post being null. I don't know why, but at least this works -->

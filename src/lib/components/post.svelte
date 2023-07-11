@@ -12,7 +12,7 @@
 	>
 		<p class="flex items-center sm:max-w-[65%] sm:min-w-[50%]">{post.title}</p>
 		<div class="flex flex-col space-y-2">
-			<p class="text-sm italic sm:text-right line-clamp-1">
+			<p class="text-xs italic sm:text-right line-clamp-1">
 				written on {post.uploadDate}
 			</p>
 			<ul class="justify-end flex-wrap gap-1 hidden sm:flex">

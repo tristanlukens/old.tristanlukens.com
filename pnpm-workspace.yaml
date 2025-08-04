@@ -1,0 +1,1 @@
+useNodeVersion: 22.17.1 # svelte-adapter-vercel works with node v22 or lower

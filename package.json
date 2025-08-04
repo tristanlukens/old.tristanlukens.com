@@ -3,7 +3,7 @@
 	"version": "2.0.0",
 	"private": true,
 	"engines": {
-		"node": "22.x"
+		"node": "20.x"
 	},
 	"scripts": {
 		"dev": "vite dev",
@@ -15,7 +15,6 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.1.1",
 		"@sveltejs/kit": "^1.30.4",
 		"@tailwindcss/typography": "^0.5.16",
 		"@typescript-eslint/eslint-plugin": "^5.62.0",
@@ -37,5 +36,8 @@
 		"typescript": "^5.9.2",
 		"vite": "^4.5.14"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/adapter-vercel": "4.0.5"
+	}
 }
